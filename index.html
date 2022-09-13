@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="https://fonts.google.com/specimen/Space+Grotesk">
+  <title>LMG | Interactive card details form</title>
+
+</head>
+<body>
+  <main class="main-container">
+    <section class="main-container__background-section">
+      <div class="card">
+        <!-- <img class="card__logo" src="./images/card-logo.svg" alt="logo"> -->
+        <p class="card__number">0000 0000 0000 0000</p>
+        <div class="card__details">
+          <p class="card__details-name">Nombre Apellido</p>
+          <p class="card__details-date"><span class="card__month">00</span>/ <span class="card__year">00</span>
+        </div>
+      </div>
+
+      <div class="card-back">
+        <p class="card-back__cvc">000</p>
+      </div>
+
+    </section>
+    <section class="main-container__form-section">
+      <form class="form" action="">
+        <label for="cardholder">Cardholder Name</label>
+        <input class="form__input" type="text" name="cardholder" placeholder="ej: Juan Perez" id="cardholder">
+
+        <label for="cardNumber">Card Number</label>
+        <input class="form__input" type="text" name="cardNumber" maxlength="19" placeholder="ej: 1234 5678 9123 0000" id="cardNumber">
+
+        <div class="form__date-cvc"> <!-- grid -->
+          <!-- 1 -->
+          <label for="">Exp. Date (MM/YY)</label>
+          <!-- 2 -->
+          <label for="">CVC</label>
+          <!-- 3 -->
+            <div>
+              <input class="form__input" maxlength="2" type="text">
+              <!--  el maxlenght no funciona si el type es number -->
+              <input class="form__input" maxlength="2" type="text">
+            </div>
+
+        </div>
+      </form>
+    </section>
+  </main>   
+  <div class="attribution"> 
+    Coded by <a href="https://github.com/lucianogarriga">Luciano Garriga</a>.
+  </div>
+</body>
+</html>
