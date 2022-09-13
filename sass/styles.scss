@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'initial';
+@use 'mixins';
 
 .main-container{
     border: 1px solid black ;
@@ -8,6 +9,7 @@
     &__background-section{
     // hacemos uso del nesting para aplicar reglas dentro de otras
         background-image: url(../images/bg-main-mobile.png);
+        background-repeat: no-repeat;
         height: 240px;  
     }
     &__form-section{
@@ -18,7 +20,16 @@
             display: flex;
             &__background-section{
                 background-image: url(../images/bg-main-desktop.png);
+                width: 900px;
+                height: 900px;
             }
     }
 }
 
+.card{ 
+    @include mixins.card('../images/bg-card-front.png')
+}
+
+.card-back{ 
+    @include mixins.card('../images/bg-card-back.png')
+}
