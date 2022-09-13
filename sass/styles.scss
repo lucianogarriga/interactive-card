@@ -11,6 +11,7 @@
         background-image: url(../images/bg-main-mobile.png);
         background-repeat: no-repeat;
         height: 240px;  
+        position: relative;
     }
     &__form-section{
         padding: 90px 24px 45px;
@@ -27,9 +28,27 @@
 }
 
 .card{ 
-    @include mixins.card('../images/bg-card-front.png')
+    @include mixins.card('../images/bg-card-front.png');
+    @include mixins.card-position(126px, 18px, 80px, 154px);
+    z-index: 1;
+    letter-spacing: 2px;
+    &__logo{
+        width: 55px;
+        margin-bottom: 30px;
+    }
+    &__number{
+        margin-bottom: 15px
+    }
+    &__details{
+        display: flex;
+        font-size: 12px;
+        letter-spacing: 1px;
+        justify-content: space-between;
+        text-transform: uppercase
+    }
 }
 
 .card-back{ 
-    @include mixins.card('../images/bg-card-back.png')
+    @include mixins.card('../images/bg-card-back.png');
+    @include mixins.card-position(38px, 72px, 350px, 260px)
 }

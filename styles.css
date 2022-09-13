@@ -19,6 +19,7 @@ body {
   background-image: url(../images/bg-main-mobile.png);
   background-repeat: no-repeat;
   height: 240px;
+  position: relative;
 }
 .main-container__form-section {
   padding: 90px 24px 45px;
@@ -43,6 +44,11 @@ body {
   background-image: url("../images/bg-card-front.png");
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  top: 126px;
+  left: 18px;
+  z-index: 1;
+  letter-spacing: 2px;
 }
 @media (min-width: 1440px) {
   .card {
@@ -50,6 +56,26 @@ body {
     height: 247px;
     padding: 30px;
   }
+}
+@media (min-width: 1440px) {
+  .card {
+    top: 80px;
+    left: 154px;
+  }
+}
+.card__logo {
+  width: 55px;
+  margin-bottom: 30px;
+}
+.card__number {
+  margin-bottom: 15px;
+}
+.card__details {
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 1px;
+  justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .card-back {
@@ -60,12 +86,21 @@ body {
   background-image: url("../images/bg-card-back.png");
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  top: 38px;
+  left: 72px;
 }
 @media (min-width: 1440px) {
   .card-back {
     width: 450px;
     height: 247px;
     padding: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .card-back {
+    top: 350px;
+    left: 260px;
   }
 }
 
