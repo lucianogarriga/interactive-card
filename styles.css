@@ -1,7 +1,35 @@
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Mochiy+Pop+P+One&family=Montserrat+Subrayada:wght@700&family=Rubik:wght@300;400;500&family=Space+Grotesk:wght@500&family=Staatliches&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: aqua;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.main-container {
+  border: 1px solid black;
+  width: 375px;
+  margin: auto;
+}
+.main-container__background-section {
+  background-image: url(../images/bg-main-mobile.png);
+  height: 240px;
+}
+.main-container__form-section {
+  padding: 90px 24px 45px;
+}
+@media (min-width: 1440px) {
+  .main-container {
+    width: 1440px;
+    display: flex;
+  }
+  .main-container__background-section {
+    background-image: url(../images/bg-main-desktop.png);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

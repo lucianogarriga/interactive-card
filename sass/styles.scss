@@ -1,6 +1,24 @@
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
+@use 'variables';
+@use 'initial';
 
-body{
-    background-color: aqua;
+.main-container{
+    border: 1px solid black ;
+    width: 375px;
+    margin: auto;
+    &__background-section{
+    // hacemos uso del nesting para aplicar reglas dentro de otras
+        background-image: url(../images/bg-main-mobile.png);
+        height: 240px;  
+    }
+    &__form-section{
+        padding: 90px 24px 45px;
+    }
+    @media (min-width: 1440px){ 
+            width: 1440px;  
+            display: flex;
+            &__background-section{
+                background-image: url(../images/bg-main-desktop.png);
+            }
+    }
 }
+
