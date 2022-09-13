@@ -31,28 +31,46 @@
       <form class="form" action="">
         <label for="cardholder">Cardholder Name</label>
         <input class="form__input" type="text" name="cardholder" placeholder="ej: Juan Perez" id="cardholder">
+        <div class="form__cardholder--error error"></div>
 
         <label for="cardNumber">Card Number</label>
         <input class="form__input" type="text" name="cardNumber" maxlength="19" placeholder="ej: 1234 5678 9123 0000" id="cardNumber">
+        <div class="form__inputnumber--error error"></div>
 
         <div class="form__date-cvc"> <!-- grid -->
           <!-- 1 -->
-          <label for="">Exp. Date (MM/YY)</label>
+          <label for="cardMonth">Exp. Date (MM/YY)</label>
           <!-- 2 -->
-          <label for="">CVC</label>
+          <label for="cardCvc">CVC</label>
           <!-- 3 -->
-            <div>
-              <input class="form__input" maxlength="2" type="text">
-              <!--  el maxlenght no funciona si el type es number -->
-              <input class="form__input" maxlength="2" type="text">
-            </div>
-
+          <div>
+            <input class="form__input" maxlength="2" type="text" name="cardMonth" id="cardMonth" placeholder="MM">
+            <!--  el maxlenght no funciona si el type es number -->
+            <input class="form__input" maxlength="2" type="text" name="cardYear" id="cardYear" placeholder="YY">
+          </div>
+          <!-- 4 -->
+          <input class="form__input" type="text" maxlength="3" name="cardCvc" id="cardCvc" placeholder="ej: 123">
+          <!-- 5 -->
+          <div class="form__errors-container">
+            <div class="form__input-mm--error error"> </div>
+            <div class="form__input-yy--error error"> </div>
+          </div>
+          <!-- 6 -->
+          <div class="form__input-cvc-error error"> </div>
         </div>
+        <input class="form__submit" type="submit" value="Confirm">
       </form>
     </section>
   </main>   
+
+  <section class="thanks-section">
+    <img class="thaks-section__img" src="./images/icon-complete.svg" alt="complete icon">
+    <h1 class="thanks-section__title">Thank you!</h1>
+    <p class="thanks-section__text">We've added your card details </p>
+    <button class="thanks-section__button" type="submit">Continue</button>
+  </section>
   <div class="attribution"> 
-    Coded by <a href="https://github.com/lucianogarriga">Luciano Garriga</a>.
+    Coded by <a href="https://github.com/lucianogarriga" target="_blank">Luciano Garriga</a>
   </div>
 </body>
 </html>
