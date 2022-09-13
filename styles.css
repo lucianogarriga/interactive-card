@@ -11,7 +11,6 @@ body {
 }
 
 .main-container {
-  border: 1px solid black;
   width: 375px;
   margin: auto;
 }
@@ -77,6 +76,19 @@ body {
   justify-content: space-between;
   text-transform: uppercase;
 }
+@media (min-width: 1440px) {
+  .card__logo {
+    width: 86px;
+    margin-bottom: 55px;
+  }
+  .card__number {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  .card__details {
+    font-size: 0.9rem;
+  }
+}
 
 .card-back {
   width: 288px;
@@ -89,6 +101,7 @@ body {
   position: absolute;
   top: 38px;
   left: 72px;
+  letter-spacing: 2px;
 }
 @media (min-width: 1440px) {
   .card-back {
@@ -102,6 +115,109 @@ body {
     top: 350px;
     left: 260px;
   }
+}
+.card-back__cvc {
+  font-size: 0.7rem;
+  margin-top: 50px;
+  margin-left: 205px;
+}
+@media (min-width: 1440px) {
+  .card-back__cvc {
+    margin-top: 75px;
+    font-size: 1.5rem;
+    text-align: end;
+    margin-right: 1rem;
+  }
+}
+
+.form {
+  display: none;
+}
+.form__label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+}
+.form__input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-family: "Space Grotesk", sans-serif;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  padding-left: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+.form__input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form__date-cvc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 10px;
+}
+.form__date {
+  display: flex;
+  gap: 0 5px;
+}
+.form__submit {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.form__submit:hover {
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .form {
+    width: 385px;
+    margin-top: 180px;
+  }
+  .form__label {
+    font-size: 1rem;
+  }
+  .form__input {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+.error {
+  color: hsl(0deg, 100%, 66%);
+  margin: -10px 0 18px;
+  font-size: 0.8rem;
+}
+
+.form__errors-container {
+  display: flex;
+  gap: 5px;
+}
+
+.form__errors-container div {
+  width: 100px;
+}
+
+.thanks-section__img {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.thanks-section__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: hsl(278deg, 68%, 11%);
 }
 
 /*# sourceMappingURL=styles.css.map */

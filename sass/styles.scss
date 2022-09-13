@@ -2,8 +2,7 @@
 @use 'initial';
 @use 'mixins';
 
-.main-container{
-    border: 1px solid black ;
+.main-container{ 
     width: 375px;
     margin: auto;
     &__background-section{
@@ -17,14 +16,14 @@
         padding: 90px 24px 45px;
     }
     @media (min-width: 1440px){ 
-            width: 1440px;  
-            display: flex;
-            &__background-section{
-                background-image: url(../images/bg-main-desktop.png);
-                width: 900px;
-                height: 900px;
-            }
-    }
+        width: 1440px;  
+        display: flex;
+        &__background-section{
+            background-image: url(../images/bg-main-desktop.png);
+            width: 900px;
+            height: 900px;
+        }
+}
 }
 
 .card{ 
@@ -46,9 +45,119 @@
         justify-content: space-between;
         text-transform: uppercase
     }
+    @media (min-width: 1440px){ 
+        &__logo{
+            width: 86px;
+            margin-bottom: 55px;
+        }
+        &__number{
+            font-size: 1.6rem;
+            margin-bottom: 25px
+        }
+        &__details{
+            font-size: 0.9rem;
+        }
+    }
 }
 
 .card-back{ 
     @include mixins.card('../images/bg-card-back.png');
-    @include mixins.card-position(38px, 72px, 350px, 260px)
+    @include mixins.card-position(38px, 72px, 350px, 260px);
+    letter-spacing: 2px;
+    &__cvc{ 
+        font-size: 0.7rem;
+        margin-top: 50px;
+        margin-left: 205px;
+        @media (min-width: 1440px){ 
+            margin-top: 75px;
+            font-size: 1.5rem;
+            text-align: end;
+            margin-right: 1rem;
+        }
+    }
+}
+.form{
+    display: none;
+    &__label{
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 8px;
+        color: variables.$Very-dark-violet;
+        font-weight: bold;
+    }
+    &__input{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        font-family: variables.$font;
+        border: 1px solid variables.$Light-grayish-violet;
+        padding-left: 10px;
+        font-size: 1rem;
+        outline: none;
+        &::placeholder{
+            color: variables.$Light-grayish-violet;
+        }
+    }
+    &__date-cvc{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 0 10px;
+    }
+    &__date{
+        display: flex;
+        gap: 0 5px;
+    }
+    &__submit{
+        background-color: variables.$Very-dark-violet;
+        color: variables.$Light-grayish-violet;
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 1rem;
+        letter-spacing: 1px; 
+        font-family: variables.$font;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    @media (min-width:1440px){
+        width: 385px;
+        margin-top: 180px;
+        &__label{
+            font-size: 1rem;
+        }
+        &__input{
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        } 
+    }
+}
+.error{
+    color: variables.$Red;
+    margin: -10px 0 18px;
+    font-size: 0.8rem;
+}
+.form__errors-container{ 
+    display: flex;
+    gap: 5px;
+}
+.form__errors-container div{ 
+    width: 100px;
+}
+.thanks-section{
+    &__img{
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    &__title{
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: variables.$Very-dark-violet;
+    }
 }
