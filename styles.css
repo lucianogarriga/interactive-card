@@ -130,9 +130,6 @@ body {
   }
 }
 
-.form {
-  display: none;
-}
 .form__label {
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -165,7 +162,7 @@ body {
   display: flex;
   gap: 0 5px;
 }
-.form__submit {
+.form__submit, .thanks-section__button {
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(270deg, 3%, 87%);
   width: 100%;
@@ -175,7 +172,7 @@ body {
   letter-spacing: 1px;
   font-family: "Space Grotesk", sans-serif;
 }
-.form__submit:hover {
+.form__submit:hover, .thanks-section__button:hover {
   cursor: pointer;
 }
 @media (min-width: 1440px) {
@@ -207,6 +204,12 @@ body {
   width: 100px;
 }
 
+.thanks-section {
+  display: none;
+  width: 375px;
+  margin: auto;
+  margin-bottom: 60px;
+}
 .thanks-section__img {
   display: block;
   margin: auto;
@@ -218,6 +221,27 @@ body {
   font-weight: 400;
   letter-spacing: 4px;
   color: hsl(278deg, 68%, 11%);
+  margin-bottom: 24px;
+}
+.thanks-section__text {
+  text-align: center;
+  color: hsl(279deg, 6%, 55%);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+@media (min-width: 1440px) {
+  .thanks-section {
+    margin-top: 180px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
 }
 
 /*# sourceMappingURL=styles.css.map */
