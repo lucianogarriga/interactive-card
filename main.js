@@ -35,7 +35,7 @@ numberInput.addEventListener('input', e=>{
     }
 
     if(numberInput.value == ''){
-        numberCard.innerText = '1234 5678 9012 3456'
+        numberCard.innerText = '1234 1234 1234 1234'
     } else {
         
     }
